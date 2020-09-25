@@ -98,7 +98,7 @@ dt {
 }
 
 .bounce {
-  animation: bounce 1.2s cubic-bezier(.78, .2, .3, .84) infinite;
+  animation: bounce 1.2s cubic-bezier(.94, .19, .44, .94) infinite;
 }
 
 .squash {
@@ -125,17 +125,18 @@ dt {
     transform: scaleY(1);
   }
 
-  30% {
-    transform: scaleY(1) scaleX(1);
+  35% {
+    transform: scaleY(1.1) scaleX(0.9);
   }
 
   55% {
-    transform: scaleY(0.5) scaleX(1.3);
+    transform: scaleY(0.6) scaleX(1.3);
   }
 
-  70% {
-    transform: scaleY(1.4) scaleX(0.8);
+  80% {
+    transform: scaleY(1.5) scaleX(0.8);
   }
+
 
   100% {
     transform: scaleY(1) scaleX(1);
