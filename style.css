@@ -42,6 +42,7 @@ dt {
   position: absolute;
   background-color: #fff;
 }
+
 /* 
 #menu section.active {
   opacity: 1;
@@ -90,7 +91,91 @@ dt {
   0% {
     transform: translateY(0);
   }
+
   100% {
     transform: translateY(var(--bottom));
+  }
+}
+
+.bounce {
+  animation: bounce 1.2s cubic-bezier(.78, .2, .3, .84) infinite;
+}
+
+.squash {
+  animation: squash 1.2s ease-in-out infinite;
+  transform-origin: bottom;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(var(--bottom));
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes squash {
+  0% {
+    transform: scaleY(1);
+  }
+
+  30% {
+    transform: scaleY(1) scaleX(1);
+  }
+
+  55% {
+    transform: scaleY(0.5) scaleX(1.3);
+  }
+
+  70% {
+    transform: scaleY(1.4) scaleX(0.8);
+  }
+
+  100% {
+    transform: scaleY(1) scaleX(1);
+  }
+}
+
+.disappear {
+  animation: slideout 1s cubic-bezier(.23, -0.3, .59, 1);
+}
+
+@keyframes slideout {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+}
+
+.active {
+  animation: slideright .5s ease-in-out;
+  opacity: 1;
+  z-index: 1;
+}
+
+@keyframes slideright {
+  0% {
+    opacity: 0;
+    transform: scale(0) translateX(-300px);
+  }
+
+  100% {
+    transform: scale(1) translateX(0);
+    z-index: 1;
   }
 }
